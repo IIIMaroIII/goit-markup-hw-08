@@ -1,0 +1,29 @@
+/* ------------------------------- Header Logo ------------------------------ */
+
+.logo {
+  display: block;
+
+  color: var(--black-color);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  & span {
+    color: var(--accent-color);
+  }
+}
+
+.page-header__logo {
+  margin-right: 93px;
+}
+
+/* ------------------------------- Footer logo ------------------------------ */
+
+.footer__logo {
+  margin-bottom: 20px;
+}
+
+.logo--color--white {
+  color: var(--white-color);
+}

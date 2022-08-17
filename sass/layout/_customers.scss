@@ -1,0 +1,26 @@
+.customers-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--indent);
+  --items: 4;
+}
+
+.customers-list__link {
+  transition: border-color var(--duration) var(--timing-function),
+    fill var(--duration) var(--timing-function);
+
+  @extend %flex;
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  fill: #afb1b8;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+    fill: var(--accent-color);
+  }
+}

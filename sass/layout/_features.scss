@@ -1,0 +1,28 @@
+.features-list {
+  display: flex;
+  gap: 30px;
+}
+
+.features-list__item {
+  width: 270px;
+}
+
+.features-list__image {
+  @extend %flex;
+  background-color: var(--third-background-color);
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  padding: 25px auto;
+}
+
+.features-list__icon {
+  width: 70px;
+  height: 70px;
+}
+
+.features-list__desc {
+  font-size: 14px;
+  line-height: 1.71;
+}

@@ -1,0 +1,85 @@
+.title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--title-text-color);
+
+  @include font;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.title--color--black {
+  color: var(--title-text-color);
+}
+
+.title--position {
+  margin-bottom: 50px;
+}
+
+.title--invisible {
+  display: none;
+}
+/* -------------------------------------------------------------------------- */
+/*                                 hero__title                                */
+/* -------------------------------------------------------------------------- */
+
+.hero__title {
+  width: 696px;
+  @include font($fw: 900, $fs: 44px, $lh: 60px);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white-color);
+  text-align: center;
+}
+
+.hero__title--position {
+  margin-bottom: 30px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               features__title                              */
+/* -------------------------------------------------------------------------- */
+
+.features-list__title {
+  display: block;
+  margin-bottom: 10px;
+  @include font($fw: 700, $fs: 14px, $lh: 16px);
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    team                                    */
+/* -------------------------------------------------------------------------- */
+
+.team-list__title {
+  @include font($fw: 500, $fs: 16px, $lh: 19px);
+}
+
+.team-list__title--position {
+  margin-bottom: 10px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   footer                                   */
+/* -------------------------------------------------------------------------- */
+
+.footer__title {
+  margin-bottom: 20px;
+  @include font($fs: 14px, $lh: 16px);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  cards-set                                 */
+/* -------------------------------------------------------------------------- */
+
+.cards-set__title {
+  margin-bottom: 4px;
+  @include font($fs: 18px, $lh: 36px);
+  text-align: left;
+  letter-spacing: 0.06em;
+}

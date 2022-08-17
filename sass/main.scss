@@ -1,0 +1,31 @@
+@import "./utils/variables";
+@import "./utils/modern_normalize";
+@import "./utils/visually-hidden";
+@import "./utils/mixin";
+@import "./utils/placeholder";
+
+@import "./base/common";
+@import "./base/section";
+@import "./base/container";
+
+@import "./components/logo";
+@import "./components/button";
+@import "./components/socials";
+@import "./components/title";
+@import "./components/backdrop";
+@import "./components/overlay";
+@import "./components/modal";
+
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/features";
+@import "./layout/job";
+@import "./layout/team";
+@import "./layout/customers";
+@import "./layout/footer";
+@import "./layout/benefits";
+
+// 1) Переименовать теги согласно BEM
+//
+// 3) Использовать placeholder sass ( 0:37 минута Урок 2) ( создать %align, вызвать @extend %align )
+// 4) Mixin ( 0:48, урок 2 ) (@mixin 'name' {}; @include 'name')
