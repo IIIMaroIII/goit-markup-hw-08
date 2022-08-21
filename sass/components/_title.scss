@@ -6,13 +6,6 @@
 /*                                  cards-set                                 */
 /* -------------------------------------------------------------------------- */
 
-.cards-set__title {
-  margin-bottom: 4px;
-  @include font($fs: 18px, $lh: 36px);
-  text-align: left;
-  letter-spacing: 0.06em;
-}
-
 /* ---------------------------------- media --------------------------------- */
 
 .title {
@@ -35,18 +28,6 @@
 
   &--invisible {
     display: none;
-  }
-}
-
-.hero__title {
-  width: 360px;
-  @include font($fw: 900, $fs: 26px, $lh: 42px);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-
-  color: #ffffff;
-  &--position {
-    margin-bottom: 30px;
   }
 }
 

@@ -1,72 +1,158 @@
 .filter-menu {
   display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+
+  &__button {
+    min-width: 73px;
+    padding: 6px 22px;
+
+    @include font($fw: 500, $fs: 16px, $lh: 26px);
+    letter-spacing: 0.03em;
+
+    transition: background-color var(--duration) var(--timing-function),
+      color var(--duration) var(--timing-function),
+      box-shadow var(--duration) var(--timing-function);
+
+    color: var(--title-text-color);
+    background-color: var(--third-background-color);
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--white-color);
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    column-gap: 8px;
+    row-gap: 15px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 768px) {
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .cards-set {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--indent);
-  --items: 9;
-}
+  flex-direction: column;
+  gap: $gap;
 
-.cards-set__wrapper-desc {
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  background: #ffffff;
-  border: 1px solid #eeeeee;
-  border-top: none;
-}
+  &__link {
+    transition: box-shadow var(--duration) var(--timing-function);
 
-.cards-set__link {
-  transition: box-shadow var(--duration) var(--timing-function);
+    color: var(--text-color);
+    display: inline-block;
 
-  color: var(--text-color);
-  display: inline-block;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
 
-  &:hover,
-  &:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      1px 4px 6px rgba(0, 0, 0, 0.16);
+  &__image {
+    width: 450px;
+
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 370px;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__wrapper-popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transition: transform var(--duration) var(--timing-function);
+    transform: translateY(100%);
+
+    padding: 63px 24px;
+
+    background: rgba(33, 150, 243, 0.9);
+
+    .cards-set__link:hover &,
+    .cards-set__link:focus & {
+      transform: translateY(0);
+    }
+  }
+
+  &__popup-desc {
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--white-color);
+  }
+
+  &__wrapper-desc {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-top: none;
+  }
+
+  &__subtitle {
+    line-height: 1.88;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+    @include font($fs: 18px, $lh: 36px);
+    text-align: left;
+    letter-spacing: 0.06em;
   }
 }
 
-.cards-set__wrapper {
-  position: relative;
-  overflow: hidden;
-}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .cards-set {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
-.cards-set__wrapper-popup {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  .cards-set__item {
+    $items: 2;
+    flex-basis: calc((100% - ($gap * ($items - 1))) / $items);
+  }
 
-  transition: transform var(--duration) var(--timing-function);
-  transform: translateY(100%);
-
-  padding: 63px 24px;
-
-  background: rgba(33, 150, 243, 0.9);
-
-  .cards-set__link:hover &,
-  .cards-set__link:focus & {
-    transform: translateY(0);
+  .cards-set__item:first-child .cards-set__wrapper-desc {
+    padding-bottom: 56px;
   }
 }
 
-.cards-set__popup-desc {
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
-  color: var(--white-color);
-}
-
-.cards-set__subtitle {
-  line-height: 1.88;
+@media screen and (min-width: 1200px) {
+  .cards-set {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .cards-set__item {
+    $items: 3;
+    flex-basis: calc((100% - ($gap * ($items - 1))) / $items);
+  }
 }

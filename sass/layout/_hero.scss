@@ -19,6 +19,18 @@
   padding-top: 118px;
   padding-bottom: 118px;
 
+  &__title {
+    width: 360px;
+    @include font($fw: 900, $fs: 26px, $lh: 42px);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+    &--position {
+      margin-bottom: 30px;
+    }
+  }
+
   @media screen and (max-width: 479px) {
     width: 100%;
   }

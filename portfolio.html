@@ -32,7 +32,7 @@
             </li>
             <li class="site-nav-list__item">
               <a
-                class="site-nav-list__link list current"
+                class="site-nav-list__link current list"
                 href="./portfolio.html"
                 >Портфолио</a
               >
@@ -43,17 +43,84 @@
           </ul>
         </nav>
 
+        <button type="button" class="mobile-menu-open" data-menu-open>
+          <svg class="mobile-menu-open__icon" width="40" height="40">
+            <use
+              href="./images/svg/icons.svg#icon-mobile-menu-open__icon"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu" data-menu>
+          <div class="container mobile-menu__container">
+            <ul class="mobile-menu__list--nav list">
+              <li class="mobile-menu__item--nav">
+                <a href="./index.html" class="mobile-menu__link--nav list"
+                  >Студия</a
+                >
+              </li>
+              <li class="mobile-menu__item--nav">
+                <a href="./portfolio.html" class="mobile-menu__link--nav list"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mobile-menu__item--nav">
+                <a href="" class="mobile-menu__link--nav list">Контакты</a>
+              </li>
+            </ul>
+            <ul class="mobile-menu__list--contacts list">
+              <li class="mobile-menu__item--contacts">
+                <a
+                  href="tel:+380961111111"
+                  class="mobile-menu__link--contacts mobile-menu__link--contacts--tel list"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-menu__item--contacts">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mobile-menu__link--contacts mobile-menu__link--contacts--mail list"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-menu__list--socials list">
+              <li class="mobile-menu__item--socials">
+                <a href="" class="mobile-menu__link--socials list">Instagram</a>
+              </li>
+              <li class="mobile-menu__item--socials">
+                <a href="" class="mobile-menu__link--socials list">Twitter</a>
+              </li>
+              <li class="mobile-menu__item--socials">
+                <a href="" class="mobile-menu__link--socials list">Facebook</a>
+              </li>
+              <li class="mobile-menu__item--socials">
+                <a href="" class="mobile-menu__link--socials list">LinkedIn</a>
+              </li>
+            </ul>
+            <button type="button" class="mobile-menu-close" data-menu-close>
+              <svg class="mobile-menu-close__icon" width="40" height="40">
+                <use href="./images/svg/icons.svg#icon-mobile-menu-close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
         <ul class="auth-list list">
           <li class="auth-list__item">
             <a class="auth-list__link list" href="mailto:info@devstudio.com"
-              ><svg class="auth-list__icon-mail icons">
+              ><svg class="auth-list__icon-mail icons" width="16" height="12">
                 <use href="./images/svg/icons.svg#icon-envelope"></use></svg
               >info@devstudio.com</a
             >
           </li>
           <li class="auth-list__item">
             <a class="auth-list__link list" href="tel:+380961111111"
-              ><svg class="auth-list__icon-smartphone icons">
+              ><svg
+                class="auth-list__icon-smartphone icons"
+                width="10"
+                height="16"
+              >
                 <use href="./images/svg/icons.svg#icon-smartphone"></use></svg
               >+38 096 111 11 11</a
             >
@@ -410,7 +477,7 @@
             />
             <span class="footer-form__wrapper">
               <button
-                class="button footer-form__button--position--left"
+                class="button footer-form__button footer-form__button--position--left"
                 type="submit"
               >
                 Подписаться
@@ -423,5 +490,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
