@@ -1,3 +1,38 @@
+@media screen and (max-width: 767px) {
+  .mobile-menu-close {
+    position: absolute;
+    top: 24px;
+    right: 15px;
+    padding: 0;
+    line-height: 0;
+    background-color: transparent;
+    border: none;
+  }
+
+  .mobile-menu-open {
+    display: block;
+    padding: 0;
+    margin-left: auto;
+    line-height: 0;
+    background-color: transparent;
+    border: none;
+
+    &:hover,
+    &:focus {
+      fill: var(--accent-color-secondary);
+    }
+  }
+}
+
+/* --------------------------------- tablet --------------------------------- */
+
+@media screen and (min-width: 768px) {
+  .mobile-menu-close,
+  .mobile-menu-open {
+    display: none;
+  }
+}
+
 .button {
   display: block;
   cursor: pointer;

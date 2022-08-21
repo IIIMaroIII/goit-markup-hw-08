@@ -1,26 +1,43 @@
-.customers-list {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: var(--indent);
-  --items: 4;
+@media screen and (max-width: 1199px) {
+  .customers__title {
+    @include font($fw: 700, $fs: 28px, $lh: 33px);
+  }
 }
 
-.customers-list__link {
-  transition: border-color var(--duration) var(--timing-function),
-    fill var(--duration) var(--timing-function);
+.customers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
 
-  @extend %flex;
-  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-  width: 170px;
-  height: 92px;
-  border: 1px solid #afb1b8;
-  fill: #afb1b8;
-  border-radius: 4px;
+  &__item {
+    $items: 2;
+    flex-basis: calc((100% - ($gap * ($items - 1))) / $items);
 
-  &:hover,
-  &:focus {
-    border-color: var(--accent-color);
-    fill: var(--accent-color);
+    @media screen and (min-width: 768px) {
+      $items: 3;
+      flex-basis: calc((100% - ($gap * ($items - 1))) / $items);
+    }
+
+    @media screen and (min-width: 1200px) {
+      $items: 6;
+      flex-basis: calc((100% - ($gap * ($items - 1))) / $items);
+    }
+  }
+
+  &__link {
+    transition: border-color var(--duration) var(--timing-function),
+      fill var(--duration) var(--timing-function);
+
+    @extend %flex;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    fill: #afb1b8;
+    border-radius: 4px;
+
+    &:hover,
+    &:focus {
+      border-color: var(--accent-color);
+      fill: var(--accent-color);
+    }
   }
 }

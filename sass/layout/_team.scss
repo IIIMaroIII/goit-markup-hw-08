@@ -1,32 +1,91 @@
-.team-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--indent);
-  --items: 4;
-}
-
-.team-list__item {
-  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-
-.team-list__wrapper {
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 5px;
-  padding-right: 5px;
-
-  background-color: var(--white-color);
-}
-
 .team {
   background-color: var(--third-background-color);
 }
 
-.team-list__desc {
-  margin-bottom: 16px;
-  font-weight: 400;
+.team-list {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white-color);
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__wrapper {
+    padding-bottom: 24px;
+
+    @media screen and (min-width: 1200px) {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__desc {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    @include font($fw: 500, $fs: 16px, $lh: 19px);
+
+    &--position {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__image {
+    margin-bottom: 30px;
+  }
 }
+
+@media screen and (min-width: 768px) {
+  .team-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__item {
+      $items: 2;
+      flex-basis: calc((100% - ($gap * ($items - 1))) / $items);
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list__item {
+    width: 270px;
+    $items: 4;
+    flex-basis: calc((100% - ($gap * ($items - 1))) / $items);
+  }
+}
+
+// .team-list {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: var(--indent);
+//   --items: 4;
+// }
+
+// .team-list__item {
+//   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+// }
+
+// .team-list__wrapper {
+//   text-align: center;
+//   padding-top: 30px;
+//   padding-bottom: 30px;
+//   padding-left: 5px;
+//   padding-right: 5px;
+
+//   background-color: var(--white-color);
+// }
+
+// .team-list__desc {
+//   margin-bottom: 16px;
+//   font-weight: 400;
+// }

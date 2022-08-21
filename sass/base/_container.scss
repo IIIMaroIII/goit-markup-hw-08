@@ -11,13 +11,18 @@
   align-items: center;
 }
 
-.footer__container {
+.mobile-menu__container {
+  padding: 48px 40px;
 }
 
 /* --------------------------------- Mobile --------------------------------- */
+
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
+  }
+  .mobile-menu__container {
+    position: relative;
   }
 }
 

@@ -1,0 +1,108 @@
+// .mobile-menu {
+//   position: fixed;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 1000;
+//   top: 0;
+//   left: 0;
+//   background-color: var(--white-color);
+//   overflow-y: scroll;
+
+//   opacity: 0;
+//   visibility: hidden;
+//   pointer-events: none;
+
+//   &.is-open {
+//     opacity: 1;
+//     visibility: visible;
+//     pointer-events: auto;
+//   }
+// }
+
+@media screen and (max-width: 767px) {
+  .mobile-menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: var(--white-color);
+    overflow-y: scroll;
+
+    transition: opacity var(--duration) var(--timing-function),
+      visibility var(--duration) var(--timing-function);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+
+  .mobile-menu__list--nav {
+    margin-bottom: 302px;
+  }
+
+  .mobile-menu__link--nav {
+    @include font($fw: 500, $fs: 40px, $lh: 47px);
+    letter-spacing: 0.02em;
+
+    color: var(--title-text-color);
+
+    .mobile-menu__item--nav:hover &,
+    .mobile-menu__item--nav:focus & {
+      color: var(--accent-color);
+    }
+  }
+  .mobile-menu__link--contacts--tel {
+    @include font($fw: 500, $fs: 34px, $lh: 40px);
+    letter-spacing: 0.02em;
+
+    color: var(--accent-color);
+  }
+
+  .mobile-menu__link--contacts--mail {
+    @include font($fw: 500, $fs: 24px, $lh: 28px);
+    letter-spacing: 0.02em;
+
+    color: var(--text-color);
+  }
+
+  .mobile-menu__list--socials {
+    display: flex;
+  }
+
+  .mobile-menu__link--socials {
+    @include font($fw: 500, $fs: 18px, $lh: 22px);
+    letter-spacing: 0.02em;
+
+    color: var(--accent-color);
+  }
+
+  .mobile-menu__item--socials {
+    padding-right: 10px;
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+      margin-right: 10px;
+    }
+  }
+
+  .mobile-menu__item--nav,
+  .mobile-menu__item--contacts {
+    margin-bottom: 32px;
+  }
+}
+
+/* --------------------------------- Tablet --------------------------------- */
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
