@@ -1417,51 +1417,11 @@ img {
   padding-bottom: 60px;
 }
 
-.contact-info__wrapper {
-  margin-right: 70px;
-}
-
-.contact-info__link--text--mail {
-  margin-bottom: 9px;
-}
-
-.contact-info__link--text--mail,
-.contact-info__link--text--tel,
-.contact-info__text {
-  color: var(--footer-link-color);
-  font-size: 14px;
-  line-height: 1.71;
-}
-
-.contact-info__text {
-  margin-bottom: 9px;
-  color: var(--white-color);
-}
-
-.footer-address {
-  margin-right: 70px;
-}
-
-.footer-form {
-  margin-left: 93px;
-}
-
-/* --------------------------------- Sign-up -------------------------------- */
-.sigh-up {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.footer-form__wrapper {
+.footer-form__button {
   display: block;
   position: relative;
 }
-
-.footer-button-modal-icon {
+.footer-form__button--icon {
   display: block;
   position: absolute;
   top: 50%;
