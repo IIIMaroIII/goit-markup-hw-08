@@ -25,6 +25,11 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
+    @media screen and (min-width: 1200px) {
+      width: 696px;
+      @include font($fw: 900, $fs: 44px, $lh: 60px);
+    }
+
     color: #ffffff;
     &--position {
       margin-bottom: 30px;

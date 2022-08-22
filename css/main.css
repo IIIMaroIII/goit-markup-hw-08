@@ -613,13 +613,6 @@ img {
   background-color: var(--accent-color);
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                   footer                                   */
-/* -------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------- */
-/*                                  cards-set                                 */
-/* -------------------------------------------------------------------------- */
-/* ---------------------------------- media --------------------------------- */
 .title {
   display: block;
   margin-left: auto;
@@ -1108,6 +1101,14 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    width: 696px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.3636363636;
+  }
 }
 .hero__title--position {
   margin-bottom: 30px;
