@@ -20,10 +20,3 @@
     display: none;
   }
 }
-
-@media screen and (min-width: 1200px) {
-  .hero__title {
-    width: 696px;
-    @include font($fw: 900, $fs: 44px, $lh: 60px);
-  }
-}
