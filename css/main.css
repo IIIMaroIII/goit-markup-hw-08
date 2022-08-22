@@ -273,6 +273,7 @@ summary {
   overflow: hidden;
 }
 
+/* ---------------------------------- mixin --------------------------------- */
 .customers-list__link, .features-list__image, .socials-list__link, .button-close {
   display: -webkit-box;
   display: -ms-flexbox;
