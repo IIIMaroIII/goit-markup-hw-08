@@ -676,8 +676,8 @@ img {
   transition: transform var(--duration) var(--timing-function), opacity var(--duration) var(--timing-function);
   transition: transform var(--duration) var(--timing-function), opacity var(--duration) var(--timing-function), -webkit-transform var(--duration) var(--timing-function);
   opacity: 1;
-  width: 450px;
-  height: 609px;
+  width: 100%;
+  height: 100%;
   top: 50%;
   left: 50%;
   padding: 40px;
@@ -691,6 +691,18 @@ img {
   -webkit-transform: translate(-50%, -50%) scale(0.1, 0.1);
           transform: translate(-50%, -50%) scale(0.1, 0.1);
 }
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .overlay {
+    width: 450px;
+    height: 609px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .overlay {
+    width: 528px;
+    height: 581px;
+  }
+}
 
 .button-close__icon {
   -webkit-transition: fill var(--duration) var(--timing-function);
@@ -702,12 +714,6 @@ img {
   fill: var(--accent-color);
 }
 
-@media screen and (min-width: 1200px) {
-  .overlay {
-    width: 528px;
-    height: 581px;
-  }
-}
 .modal-label {
   margin-bottom: 10px;
 }
@@ -1638,7 +1644,7 @@ img {
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .cards-set__image {
-  width: 450px;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .cards-set__image {
