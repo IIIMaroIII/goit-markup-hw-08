@@ -44,11 +44,17 @@
     }
   }
 
-  .mobile-menu__list--nav {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__list--nav {
     margin-bottom: 302px;
   }
 
-  .mobile-menu__link--nav {
+  &__link--nav {
     @include font($fw: 500, $fs: 40px, $lh: 47px);
     letter-spacing: 0.02em;
 
@@ -59,32 +65,32 @@
       color: var(--accent-color);
     }
   }
-  .mobile-menu__link--contacts--tel {
+  &__link--contacts--tel {
     @include font($fw: 500, $fs: 34px, $lh: 40px);
     letter-spacing: 0.02em;
 
     color: var(--accent-color);
   }
 
-  .mobile-menu__link--contacts--mail {
+  &__link--contacts--mail {
     @include font($fw: 500, $fs: 24px, $lh: 28px);
     letter-spacing: 0.02em;
 
     color: var(--text-color);
   }
 
-  .mobile-menu__list--socials {
+  &__list--socials {
     display: flex;
   }
 
-  .mobile-menu__link--socials {
+  &__link--socials {
     @include font($fw: 500, $fs: 18px, $lh: 22px);
     letter-spacing: 0.02em;
 
     color: var(--accent-color);
   }
 
-  .mobile-menu__item--socials {
+  &__item--socials {
     padding-right: 10px;
 
     &:not(:last-child) {
@@ -93,8 +99,8 @@
     }
   }
 
-  .mobile-menu__item--nav,
-  .mobile-menu__item--contacts {
+  &__item--nav,
+  &__item--contacts {
     margin-bottom: 32px;
   }
 }
