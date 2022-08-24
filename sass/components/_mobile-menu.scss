@@ -43,12 +43,6 @@
       pointer-events: auto;
     }
 
-    &__wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
     &__link--nav {
       @include font($fw: 500, $fs: 40px, $lh: 47px);
       letter-spacing: 0.02em;
@@ -94,9 +88,12 @@
       }
     }
 
-    &__item--nav,
-    &__item--contacts {
+    &__item--nav:not(:last-child),
+    &__item--contacts:not(:last-child) {
       margin-bottom: 32px;
+    }
+    &__item--contacts:last-child {
+      margin-bottom: 64px;
     }
   }
 }

@@ -13,6 +13,11 @@
 
 .mobile-menu__container {
   padding: 48px 40px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* --------------------------------- Mobile --------------------------------- */
@@ -20,9 +25,6 @@
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
-  }
-  .mobile-menu__container {
-    position: relative;
   }
 }
 
