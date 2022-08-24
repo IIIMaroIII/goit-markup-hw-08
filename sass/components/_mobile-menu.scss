@@ -42,66 +42,62 @@
       visibility: visible;
       pointer-events: auto;
     }
-  }
 
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-  &__list--nav {
-    margin-bottom: 302px;
-  }
+    &__link--nav {
+      @include font($fw: 500, $fs: 40px, $lh: 47px);
+      letter-spacing: 0.02em;
 
-  &__link--nav {
-    @include font($fw: 500, $fs: 40px, $lh: 47px);
-    letter-spacing: 0.02em;
+      color: var(--title-text-color);
 
-    color: var(--title-text-color);
+      .mobile-menu__item--nav:hover &,
+      .mobile-menu__item--nav:focus & {
+        color: var(--accent-color);
+      }
+    }
+    &__link--contacts--tel {
+      @include font($fw: 500, $fs: 34px, $lh: 40px);
+      letter-spacing: 0.02em;
 
-    .mobile-menu__item--nav:hover &,
-    .mobile-menu__item--nav:focus & {
       color: var(--accent-color);
     }
-  }
-  &__link--contacts--tel {
-    @include font($fw: 500, $fs: 34px, $lh: 40px);
-    letter-spacing: 0.02em;
 
-    color: var(--accent-color);
-  }
+    &__link--contacts--mail {
+      @include font($fw: 500, $fs: 24px, $lh: 28px);
+      letter-spacing: 0.02em;
 
-  &__link--contacts--mail {
-    @include font($fw: 500, $fs: 24px, $lh: 28px);
-    letter-spacing: 0.02em;
-
-    color: var(--text-color);
-  }
-
-  &__list--socials {
-    display: flex;
-  }
-
-  &__link--socials {
-    @include font($fw: 500, $fs: 18px, $lh: 22px);
-    letter-spacing: 0.02em;
-
-    color: var(--accent-color);
-  }
-
-  &__item--socials {
-    padding-right: 10px;
-
-    &:not(:last-child) {
-      border-right: 1px solid rgba(33, 33, 33, 0.2);
-      margin-right: 10px;
+      color: var(--text-color);
     }
-  }
 
-  &__item--nav,
-  &__item--contacts {
-    margin-bottom: 32px;
+    &__list--socials {
+      display: flex;
+    }
+
+    &__link--socials {
+      @include font($fw: 500, $fs: 18px, $lh: 22px);
+      letter-spacing: 0.02em;
+
+      color: var(--accent-color);
+    }
+
+    &__item--socials {
+      padding-right: 10px;
+
+      &:not(:last-child) {
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+        margin-right: 10px;
+      }
+    }
+
+    &__item--nav,
+    &__item--contacts {
+      margin-bottom: 32px;
+    }
   }
 }
 
